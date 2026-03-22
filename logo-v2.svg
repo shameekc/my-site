@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" width="420" height="80">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Typographic logo: "shameek" in lowercase Instrument Serif with a terracotta accent slash -->
+
+  <!-- The name — lowercase, editorial, intimate -->
+  <text x="20" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="normal" letter-spacing="0.04em" fill="#e8e2d8" font-style="italic">shameek</text>
+
+  <!-- Accent dash — the em-dash, signature punctuation -->
+  <line x1="268" y1="40" x2="310" y2="40" stroke="#c4704b" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Tagline in small caps -->
+  <text x="320" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="500" letter-spacing="0.2em" fill="#c4704b" text-transform="uppercase">BUILDER</text>
+  <text x="320" y="56" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="500" letter-spacing="0.2em" fill="#8a8278" text-transform="uppercase">FARMER</text>
+</svg>

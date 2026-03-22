@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="360" height="80">
+  <defs>
+    <style>
+      .v1-wordmark { font-family: Georgia, 'Times New Roman', serif; font-size: 32px; font-weight: normal; letter-spacing: 0.08em; }
+      .v1-dot { font-family: Georgia, serif; font-size: 32px; }
+    </style>
+  </defs>
+
+  <!-- Mark: Three ascending bars — representing the bridge between worlds -->
+  <g transform="translate(16, 14)">
+    <!-- Left bar — grounded, the farmer -->
+    <rect x="0" y="22" width="8" height="30" rx="1" fill="#c4704b"/>
+    <!-- Center bar — the bridge -->
+    <rect x="14" y="11" width="8" height="41" rx="1" fill="#e8e2d8"/>
+    <!-- Right bar — ascending, the builder -->
+    <rect x="28" y="0" width="8" height="52" rx="1" fill="#c4704b"/>
+    <!-- Connecting baseline -->
+    <rect x="0" y="48" width="36" height="2" rx="1" fill="#e8e2d8" opacity="0.4"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="72" y="52" class="v1-wordmark" fill="#e8e2d8">SHAMEEK</text>
+
+  <!-- Subtle period as punctuation — the declarative voice -->
+  <text x="282" y="52" class="v1-dot" fill="#c4704b">.</text>
+</svg>

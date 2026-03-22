@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- P2 #16: Cleaner title tag -->
+  <title>Shameek Chakravarty</title>
+  <meta name="description" content="4x founder. Amazon and Yahoo alumnus. Farmer. Building thecrux.ai, Farmizen, Mantid AI. Speaking and consulting on AI Adoption and GTM Engineering.">
+
+  <!-- P2 #13: Favicon using the three-bar logo mark -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23faf8f5'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='22' fill='%231a1815' text-anchor='middle'%3ES%3C/text%3E%3Crect x='5' y='26' width='22' height='2' rx='1' fill='%23c4704b'/%3E%3C/svg%3E">
+
+  <!-- P0 #4: Non-blocking font loading via <link> instead of CSS @import -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- P2 #15: Lightweight privacy-respecting analytics placeholder -->
+  <!-- Uncomment and replace with your Plausible domain when ready:
+  <script defer data-domain="shameek.me" src="https://plausible.io/js/script.js"></script>
+  -->
+</head>
+<body>
+
+  <!-- P2 #17: Skip-to-content link for accessibility -->
+  <a href="#hero" class="skip-link">Skip to content</a>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <!-- P2 #19: Logo links to #hero instead of # -->
+    <a href="#hero" class="nav-logo" aria-label="Home">
+      <span class="nav-logo-text">SHAMEEK<span class="nav-logo-dot">.</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#building">Building</a></li>
+      <li><a href="#speaking">Speaking</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1 class="hero-headline">I have spent twenty years building platforms for the people the tech industry forgets.</h1>
+
+      <div class="hero-body">
+        <p>Small-business owners drowning in ad complexity. Seven thousand farmers locked out of fair pricing. Factory workers replaced instead of augmented. Non-technical professionals told AI is not for them.</p>
+        <p>It has always been the same problem — power concentrated in the hands of the few who can code, configure, or pay. Every company I have built has been an argument against that concentration.</p>
+        <p>AI is the most consequential lever I have ever held. I am using it to pry the door open.</p>
+      </div>
+
+      <!-- P1 #5: Headshot placeholder area -->
+      <div class="hero-id">
+        <div class="hero-id-row">
+          <div class="hero-photo" aria-label="Photo of Shameek Chakravarty">
+            <img src="headshot.png" alt="Shameek Chakravarty" width="80" height="80">
+          </div>
+          <p><strong>Shameek Chakravarty</strong> — 4&times; founder. Amazon and Yahoo alumnus. Farmer. Building thecrux.ai, Farmizen, Mantid AI — and consulting with companies on GTM Engineering and AI Adoption.</p>
+        </div>
+      </div>
+
+      <div class="hero-ctas">
+        <!-- P0 #2: Book a Call now opens Calendly popup -->
+        <a href="https://calendly.com/shameekc/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a Call <span class="btn-arrow">&rarr;</span></a>
+        <a href="https://twitter.com/shameekc" target="_blank" rel="noopener" class="btn btn-secondary">Follow on Twitter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- P1 #6: Featured In press logo bar -->
+  <section class="featured-in">
+    <div class="section-inner--wide">
+      <div class="featured-in-label">Featured In</div>
+      <div class="featured-in-logos">
+        <span class="press-logo">BBC</span>
+        <span class="press-logo">CNBC</span>
+        <span class="press-logo">Bloomberg</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- About -->
+  <!-- P1 #7: Breaking up wall of text with pull quotes and phase markers -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-label">The Arc</div>
+
+      <div class="about-text">
+        <p>The arc does not make sense on paper. That is the point.</p>
+
+        <div class="about-phase-marker">Engineering &amp; Product — 2001-2012</div>
+
+        <p>I started in engineering — SSL-VPN internals at Juniper, computational biology at Strand Genomics, enterprise tools at Sun Microsystems. Then product management at Amazon, where I shipped Omakase and Amazon Widgets — the latter became a multi-billion-dollar revenue driver. Then Yahoo, where I ran the SMB platform and integrated the Lexity acquisition.</p>
+
+        <blockquote class="about-pullquote">I could have stayed on that trajectory. I did not.</blockquote>
+
+        <p>In 2008, I co-founded Ohana Media — one of India's earliest real-time bidding platforms. We bootstrapped it to a $3M+ annual run-rate before anyone in India knew what a DSP was. Exited via stake sale.</p>
+
+        <div class="about-phase-marker">The Hard Left — 2017-Present</div>
+
+        <p>In 2017, I founded Farmizen — a farm-to-fork marketplace that scaled to over &#8377;10 crore in annual run-rate, connected 7,000+ farmers across two cities, and built the entire stack from scratch. We pivoted the model during COVID and kept moving. BBC covered us. CNBC covered us. Bloomberg covered us. Bengaluru voted us a Top Brand in 2019. Today, Farmizen is the largest organic farming community in India — and I am still building it.</p>
+
+        <p>I spent nearly a decade in agriculture — not as a side project, but as the central work of my life. I learned what it means to build for users who have never opened a laptop, in markets where connectivity is a luxury and trust is earned in person, over chai, in Kannada.</p>
+
+        <blockquote class="about-pullquote">That decade changed how I think about technology. It is why I do not believe AI should belong only to engineers.</blockquote>
+
+        <div class="about-phase-marker">AI &amp; What Comes Next — 2025-Present</div>
+
+        <p>I also run Mantid AI — agentic AI for manufacturing. Computer vision agents for safety, security, and logistics. Real systems for real factories.</p>
+
+        <p>And thecrux.ai — intensive weekend bootcamps that teach non-technical professionals to build with AI, without writing a single line of code. Not theory. Not prompt-engineering slides. Hands-on, cohort-based, two days, you walk out building.</p>
+
+        <p>Alongside these, I consult with companies on GTM Engineering and AI Adoption — helping leadership teams build the systems and strategies that turn AI from a slide deck into shipped product.</p>
+      </div>
+
+      <div class="about-credentials reveal">
+        <p><strong>ISB MBA</strong> — President, Entrepreneurship &amp; Venture Capital Club. TorchBearer Award. Merit List.</p>
+        <p><strong>BITS Pilani, Computer Science</strong> — First Class with Distinction. 30 Under 30 across alumni batches.</p>
+        <p><strong>MENSA</strong> — Founded the Hyderabad chapter.</p>
+      </div>
+
+      <p class="about-coda reveal">The credentials matter less than the pattern. I keep choosing the harder problem over the bigger paycheque — and the users everyone else ignores.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- What I Am Building Now -->
+  <section id="building">
+    <div class="section-inner--wide">
+      <div class="section-label">What I Am Building Now</div>
+
+      <!-- P2 #18: Framing sentence that connects the ventures -->
+      <p class="ventures-framing reveal">Every venture below serves the same thesis: the most powerful tools should reach the people furthest from them. AI education, organic farming, factory-floor agents, GTM systems — different surfaces, same conviction.</p>
+
+      <div class="ventures-grid reveal-stagger">
+        <a href="https://thecrux.ai" target="_blank" rel="noopener" class="venture-card">
+          <div class="venture-card-label">AI Education</div>
+          <h3>thecrux.ai</h3>
+          <p>The new digital divide is not between those who have computers and those who do not. It is between those who can wield AI and those who cannot. Weekend bootcamps. Cohort-based. You come in uncertain; you leave building.</p>
+          <span class="card-link">Explore thecrux.ai <span>&rarr;</span></span>
+        </a>
+
+        <a href="https://farmizen.com" target="_blank" rel="noopener" class="venture-card">
+          <div class="venture-card-label">Organic Farming</div>
+          <h3>Farmizen</h3>
+          <p>India's largest organic farming community. What started as a farm-to-fork marketplace — 7,000+ farmers, &#8377;10 Cr+ ARR — has grown into the infrastructure for organic agriculture at scale. BBC, CNBC, Bloomberg covered the early story; the current chapter is larger.</p>
+          <span class="card-link">Explore Farmizen <span>&rarr;</span></span>
+        </a>
+
+        <a href="https://mantid.ai" target="_blank" rel="noopener" class="venture-card">
+          <div class="venture-card-label">Agentic AI</div>
+          <h3>Mantid AI</h3>
+          <p>Agentic AI for manufacturing. Computer vision agents that handle safety, security, and logistics on the factory floor — with defined precision/recall targets, latency SLOs, guardrails, and fallback behaviours. Not demos; production systems.</p>
+          <span class="card-link">Explore Mantid AI <span>&rarr;</span></span>
+        </a>
+
+        <div class="venture-card">
+          <div class="venture-card-label">Consulting</div>
+          <h3>GTM Engineering &amp; AI Adoption</h3>
+          <p>I work directly with leadership teams on two problems: building go-to-market systems that actually run — pipelines, automation, monetisation — and adopting AI in ways that ship results, not pilots. This is not advisory from a distance; I build the systems with you.</p>
+          <!-- P0 #2: Consulting card also links to Calendly -->
+          <a href="https://calendly.com/shameekc/30min" target="_blank" rel="noopener" class="card-link">Book a consulting call <span>&rarr;</span></a>
+        </div>
+      </div>
+
+      <div class="ventures-secondary reveal-stagger">
+        <div class="venture-secondary-card">
+          <h4>The Farmizen Show</h4>
+          <p>Podcast. Conversations at the intersection of food, farming, and health — about the systems that feed us and the people who grow what we eat.</p>
+        </div>
+
+        <!-- P1 #9 (bonus): Removed duplicate Books card from here. Kept only in Writing & Media. -->
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Speaking & Consulting -->
+  <section id="speaking">
+    <div class="section-inner">
+      <div class="section-label">Speaking &amp; Consulting</div>
+
+      <ul class="speaking-topics reveal-stagger">
+        <li>
+          <div class="speaking-topic-name">AI Adoption Without Code</div>
+          <div class="speaking-topic-desc">How non-technical teams can deploy AI tools that actually ship results, not just demos.</div>
+        </li>
+        <li>
+          <div class="speaking-topic-name">Product Management</div>
+          <div class="speaking-topic-desc">Building products in messy, low-infrastructure markets where the user has never filed a bug report.</div>
+        </li>
+        <li>
+          <div class="speaking-topic-name">GTM Engineering</div>
+          <div class="speaking-topic-desc">Pipelines, automation, monetisation strategy. Not theory; systems that run.</div>
+        </li>
+        <li>
+          <div class="speaking-topic-name">Entrepreneurship in India</div>
+          <div class="speaking-topic-desc">What it means to bootstrap in a market where unit economics fight you at every turn.</div>
+        </li>
+        <li>
+          <div class="speaking-topic-name">Organic Farming &amp; Technology</div>
+          <div class="speaking-topic-desc">The Farmizen story. Where agriculture meets logistics meets trust meets AI.</div>
+        </li>
+      </ul>
+
+      <p class="speaking-coda reveal">I have spoken to corporate audiences, startup cohorts, and academic institutions. If you want someone who will say what they actually think — not what the audience wants to hear — I am available.</p>
+
+      <div style="margin-top: 2rem;">
+        <!-- P0 #2: Speaking CTA links to Calendly -->
+        <a href="https://calendly.com/shameekc/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a Speaking Engagement <span class="btn-arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- P2 #14: Renamed from "Vibe Projects" to "Projects" -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="section-label">Projects</div>
+
+      <div class="vibe-grid reveal-stagger">
+        <a href="https://pranaflow.app" target="_blank" rel="noopener" class="vibe-card">
+          <h3>PranaFlow</h3>
+          <p>AI-personalised pranayama guidance. Ancient breathing techniques meet modern personalisation — custom routines based on your time, health, and goals. Built because I practise pranayama daily and every existing app felt generic.</p>
+          <span class="card-link">pranaflow.app <span>&rarr;</span></span>
+        </a>
+
+        <a href="https://devalingo.com" target="_blank" rel="noopener" class="vibe-card">
+          <h3>Devalingo</h3>
+          <p>Learn Sanskrit. Understand mantras. A tool for anyone who has chanted words they reverence but never fully understood. Built because I wanted to read the original texts — not someone else's translation of them.</p>
+          <span class="card-link">devalingo.com <span>&rarr;</span></span>
+        </a>
+      </div>
+
+      <p class="vibe-coda reveal">Both shipped fast, built with AI. Proof that you do not need a team or a funding round to put something real into the world.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Writing & Media -->
+  <section id="writing">
+    <div class="section-inner">
+      <div class="section-label">Writing &amp; Media</div>
+
+      <div class="writing-grid reveal-stagger">
+        <div class="writing-block">
+          <h3>Articles</h3>
+          <ul>
+            <li><em>The Farmer and The Algorithm</em> — on the collision between AI and agriculture</li>
+            <li><em>Your AI Product Doesn't Need a PhD</em> — on building AI products without a research team</li>
+            <li><em>The Matrix Decoded</em> — on Neo's victory and what it tells us about systems</li>
+          </ul>
+        </div>
+
+        <div class="writing-block">
+          <h3>In the Press</h3>
+          <p>Featured in BBC, CNBC, Bloomberg, and Indian media for Farmizen's work in farm-to-fork commerce, agricultural technology, and startup building.</p>
+        </div>
+
+        <div class="writing-block">
+          <h3>Books</h3>
+          <p>Two in progress — one on AI, one on the intersection of farming and technology. Coming soon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- P0 #1: Testimonials section REMOVED entirely. Replace only with real quotes. -->
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-label">Get In Touch</div>
+
+      <div class="contact-layout">
+        <div class="contact-text reveal">
+          <p>I respond to specifics, not form letters. Tell me what you are working on, what you need, and why you think we should talk.</p>
+
+          <!-- P0 #2: Actual booking link -->
+          <a href="https://calendly.com/shameekc/30min" target="_blank" rel="noopener" class="btn btn-primary" style="margin-bottom: 1.5rem;">Book a Call <span class="btn-arrow">&rarr;</span></a>
+
+          <p>For everything else, use the form or email me directly.</p>
+
+          <a href="mailto:shameekc@gmail.com" class="contact-email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            shameekc@gmail.com
+          </a>
+        </div>
+
+        <!-- P0 #3: Form wired to Formspree (replace YOUR_FORM_ID with actual ID after creating at formspree.io) -->
+        <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">What is this about</label>
+            <input type="text" id="subject" name="subject" placeholder="Speaking / Consulting / Partnership / Other" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Be specific. What are you working on, what do you need, and why should we talk?" required></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary">Send Message <span class="btn-arrow">&rarr;</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <p>Built by someone who has been on both sides of the digital divide — and chose to stay on the harder one.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://twitter.com/shameekc" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://linkedin.com/in/shameekc" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/shameekc" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chat Widget -->
+  <div class="chat-widget" id="chatWidget">
+    <button class="chat-toggle" id="chatToggle" aria-label="Open chat">
+      <svg class="chat-toggle-icon chat-icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+      <svg class="chat-toggle-icon chat-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+      <span class="chat-toggle-label">Ask me anything</span>
+    </button>
+
+    <div class="chat-panel" id="chatPanel">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <div class="chat-header-avatar">S</div>
+          <div class="chat-header-meta">
+            <span class="chat-header-name">Shameek's AI</span>
+            <span class="chat-header-status"><span class="chat-header-dot"></span>Online</span>
+          </div>
+        </div>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-message chat-message-assistant">
+          <div class="chat-bubble">I know a fair amount about Shameek's work, ventures, and how he can help. Ask me anything.</div>
+        </div>
+      </div>
+      <form class="chat-input-form" id="chatForm">
+        <input type="text" class="chat-input" id="chatInput" placeholder="Type your question..." autocomplete="off">
+        <button type="submit" class="chat-send" id="chatSend" aria-label="Send message">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    /* --- Mobile Nav Toggle --- */
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+
+    /* --- Nav scroll state --- */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* --- Scroll Reveal --- */
+    const revealElements = document.querySelectorAll('.reveal, .reveal-stagger');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    /* --- Smooth scroll for anchor links --- */
+    /* P2 #19: Handles #hero properly for logo click */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    /* --- Chat Widget --- */
+    const chatWidget = document.getElementById('chatWidget');
+    const chatToggle = document.getElementById('chatToggle');
+    const chatPanel = document.getElementById('chatPanel');
+    const chatForm = document.getElementById('chatForm');
+    const chatInput = document.getElementById('chatInput');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatIconOpen = chatToggle.querySelector('.chat-icon-open');
+    const chatIconClose = chatToggle.querySelector('.chat-icon-close');
+    const chatToggleLabel = chatToggle.querySelector('.chat-toggle-label');
+
+    let chatHistory = [];
+    let chatOpen = false;
+    let chatMode = 'qa';
+    let intakeData = null;
+
+    chatToggle.addEventListener('click', () => {
+      chatOpen = !chatOpen;
+      chatPanel.classList.toggle('open', chatOpen);
+      chatIconOpen.style.display = chatOpen ? 'none' : 'block';
+      chatIconClose.style.display = chatOpen ? 'block' : 'none';
+      chatToggleLabel.style.display = chatOpen ? 'none' : 'inline';
+      if (chatOpen) {
+        chatInput.focus();
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+    });
+
+    function addMessage(role, text) {
+      const div = document.createElement('div');
+      div.className = `chat-message chat-message-${role}`;
+      const bubble = document.createElement('div');
+      bubble.className = 'chat-bubble';
+      bubble.textContent = text;
+      div.appendChild(bubble);
+      chatMessages.appendChild(div);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      return div;
+    }
+
+    function addTypingIndicator() {
+      const div = document.createElement('div');
+      div.className = 'chat-message chat-message-assistant';
+      div.id = 'chatTyping';
+      div.innerHTML = '<div class="chat-bubble chat-typing"><span></span><span></span><span></span></div>';
+      chatMessages.appendChild(div);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      return div;
+    }
+
+    function removeTypingIndicator() {
+      const el = document.getElementById('chatTyping');
+      if (el) el.remove();
+    }
+
+    async function submitIntake(data, history) {
+      try {
+        await fetch('/api/generate-proposal', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ intakeData: data, conversation: history })
+        });
+      } catch (err) {
+        console.error('Failed to submit intake:', err);
+      }
+    }
+
+    chatForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const message = chatInput.value.trim();
+      if (!message) return;
+
+      addMessage('user', message);
+      chatInput.value = '';
+      chatInput.disabled = true;
+
+      addTypingIndicator();
+
+      try {
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message, history: chatHistory })
+        });
+
+        removeTypingIndicator();
+
+        if (!res.ok) throw new Error('Request failed');
+
+        const data = await res.json();
+        addMessage('assistant', data.reply);
+
+        chatHistory.push({ role: 'user', content: message });
+        chatHistory.push({ role: 'assistant', content: data.reply });
+
+        // Track mode and intake state
+        if (data.mode) chatMode = data.mode;
+        if (data.intakeData) intakeData = data.intakeData;
+
+        // When intake completes, POST to generate-proposal
+        if (data.intakeComplete && data.intakeData) {
+          submitIntake(data.intakeData, chatHistory);
+        }
+
+        // Keep history manageable
+        if (chatHistory.length > 30) chatHistory = chatHistory.slice(-24);
+      } catch (err) {
+        removeTypingIndicator();
+        addMessage('assistant', 'Something went wrong. Try the contact form or email shameekc@gmail.com directly.');
+      }
+
+      chatInput.disabled = false;
+      chatInput.focus();
+    });
+  </script>
+
+</body>
+</html>

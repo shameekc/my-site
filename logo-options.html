@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo Options — shameek.me</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #f0ece6;
+      color: #1a1815;
+      padding: 3rem 2rem;
+    }
+
+    h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #7a7368;
+      font-size: 0.9rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .card-label {
+      background: #faf8f5;
+      padding: 1rem 1.5rem 0.75rem;
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #c4704b;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .card-desc {
+      background: #faf8f5;
+      padding: 0 1.5rem 1.25rem;
+      font-size: 0.82rem;
+      color: #7a7368;
+      line-height: 1.6;
+    }
+
+    .preview {
+      padding: 3rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 120px;
+    }
+
+    .preview.light {
+      background: #faf8f5;
+    }
+
+    .preview.dark {
+      background: #1a1815;
+    }
+
+    /* ---- OPTION A: Pure Typographic — Instrument Serif ---- */
+    .logo-a {
+      font-family: 'Instrument Serif', serif;
+      font-size: 2.2rem;
+      letter-spacing: 0.1em;
+      color: #1a1815;
+      line-height: 1;
+    }
+    .logo-a .dot { color: #c4704b; }
+    .dark .logo-a { color: #e8e2d8; }
+
+    /* ---- OPTION B: Lowercase italic — Instrument Serif ---- */
+    .logo-b {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 2.4rem;
+      letter-spacing: 0.02em;
+      color: #1a1815;
+      line-height: 1;
+    }
+    .logo-b .dot { color: #c4704b; font-style: normal; }
+    .dark .logo-b { color: #e8e2d8; }
+
+    /* ---- OPTION C: Cormorant Garamond — elegant weight ---- */
+    .logo-c {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 2.5rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #1a1815;
+      line-height: 1;
+    }
+    .logo-c .dot { color: #c4704b; font-weight: 400; }
+    .dark .logo-c { color: #e8e2d8; }
+
+    /* ---- OPTION D: Playfair Display — editorial punch ---- */
+    .logo-d {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 2rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #1a1815;
+      line-height: 1;
+    }
+    .logo-d .dot { color: #c4704b; }
+    .dark .logo-d { color: #e8e2d8; }
+
+    /* ---- OPTION E: Monogram S + name ---- */
+    .logo-e {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo-e-monogram {
+      width: 42px;
+      height: 42px;
+      border: 2px solid #c4704b;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.4rem;
+      color: #c4704b;
+      flex-shrink: 0;
+    }
+    .logo-e-name {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #1a1815;
+    }
+    .dark .logo-e-monogram { border-color: #c4704b; color: #c4704b; }
+    .dark .logo-e-name { color: #e8e2d8; }
+
+    /* ---- OPTION F: Name with terracotta underline ---- */
+    .logo-f {
+      font-family: 'Instrument Serif', serif;
+      font-size: 2rem;
+      letter-spacing: 0.08em;
+      color: #1a1815;
+      line-height: 1;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+    .logo-f::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2.5px;
+      background: linear-gradient(90deg, #c4704b, #c4704b 60%, transparent);
+    }
+    .logo-f .dot { color: #c4704b; }
+    .dark .logo-f { color: #e8e2d8; }
+
+    /* -- Nav simulation -- */
+    .nav-sim {
+      max-width: 1100px;
+      margin: 3rem auto 0;
+    }
+
+    .nav-sim-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #c4704b;
+      margin-bottom: 1rem;
+    }
+
+    .nav-bar {
+      background: #faf8f5;
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 10px;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+
+    .nav-bar .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-bar .nav-links a {
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #7a7368;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    /* Scale logos down for nav context */
+    .nav-bar .logo-a { font-size: 1.5rem; }
+    .nav-bar .logo-b { font-size: 1.6rem; }
+    .nav-bar .logo-c { font-size: 1.6rem; }
+    .nav-bar .logo-d { font-size: 1.35rem; }
+    .nav-bar .logo-e-monogram { width: 32px; height: 32px; font-size: 1.1rem; }
+    .nav-bar .logo-e-name { font-size: 0.7rem; }
+    .nav-bar .logo-e { gap: 0.7rem; }
+    .nav-bar .logo-f { font-size: 1.4rem; padding-bottom: 4px; }
+    .nav-bar .logo-f::after { height: 2px; }
+
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; }
+      .nav-bar .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Logo Options</h1>
+  <p class="subtitle">Six directions. Each shown on light and dark backgrounds.</p>
+
+  <div class="grid">
+
+    <!-- A -->
+    <div class="card">
+      <div class="card-label">A — Clean Uppercase</div>
+      <div class="card-desc">Instrument Serif, wide tracking. Confident and editorial. The period in terracotta is the only accent.</div>
+      <div class="preview light">
+        <div class="logo-a">SHAMEEK<span class="dot">.</span></div>
+      </div>
+      <div class="preview dark">
+        <div class="logo-a">SHAMEEK<span class="dot">.</span></div>
+      </div>
+    </div>
+
+    <!-- B -->
+    <div class="card">
+      <div class="card-label">B — Lowercase Italic</div>
+      <div class="card-desc">Instrument Serif italic, tight tracking. Personal, literary, more intimate. Feels like a byline.</div>
+      <div class="preview light">
+        <div class="logo-b">shameek<span class="dot">.</span></div>
+      </div>
+      <div class="preview dark">
+        <div class="logo-b">shameek<span class="dot">.</span></div>
+      </div>
+    </div>
+
+    <!-- C -->
+    <div class="card">
+      <div class="card-label">C — Cormorant Light</div>
+      <div class="card-desc">Cormorant Garamond at 300 weight. Ultra-refined, luxury editorial. High contrast letterforms with generous spacing.</div>
+      <div class="preview light">
+        <div class="logo-c">SHAMEEK<span class="dot">.</span></div>
+      </div>
+      <div class="preview dark">
+        <div class="logo-c">SHAMEEK<span class="dot">.</span></div>
+      </div>
+    </div>
+
+    <!-- D -->
+    <div class="card">
+      <div class="card-label">D — Playfair Display</div>
+      <div class="card-desc">Playfair Display, classic editorial. Strong contrast between thick and thin strokes. Newspaper masthead energy.</div>
+      <div class="preview light">
+        <div class="logo-d">SHAMEEK<span class="dot">.</span></div>
+      </div>
+      <div class="preview dark">
+        <div class="logo-d">SHAMEEK<span class="dot">.</span></div>
+      </div>
+    </div>
+
+    <!-- E -->
+    <div class="card">
+      <div class="card-label">E — Monogram + Sans</div>
+      <div class="card-desc">Circled "S" monogram in terracotta, name in DM Sans uppercase. Works as a system — monogram alone for favicon, full lockup for nav.</div>
+      <div class="preview light">
+        <div class="logo-e">
+          <div class="logo-e-monogram">S</div>
+          <div class="logo-e-name">Shameek Chakravarty</div>
+        </div>
+      </div>
+      <div class="preview dark">
+        <div class="logo-e">
+          <div class="logo-e-monogram">S</div>
+          <div class="logo-e-name">Shameek Chakravarty</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- F -->
+    <div class="card">
+      <div class="card-label">F — Underline Accent</div>
+      <div class="card-desc">Instrument Serif with a terracotta underline that fades out. Connects the name to the brand color through a subtle structural detail.</div>
+      <div class="preview light">
+        <div class="logo-f">SHAMEEK<span class="dot">.</span></div>
+      </div>
+      <div class="preview dark">
+        <div class="logo-f">SHAMEEK<span class="dot">.</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Nav context simulations -->
+  <div class="nav-sim">
+    <div class="nav-sim-label">How they look in the nav bar</div>
+
+    <div class="nav-bar">
+      <div class="logo-a">SHAMEEK<span class="dot" style="color:#c4704b">.</span></div>
+      <ul class="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Building</a></li>
+        <li><a href="#">Speaking</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-bar">
+      <div class="logo-b">shameek<span class="dot" style="color:#c4704b">.</span></div>
+      <ul class="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Building</a></li>
+        <li><a href="#">Speaking</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-bar">
+      <div class="logo-c">SHAMEEK<span class="dot" style="color:#c4704b">.</span></div>
+      <ul class="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Building</a></li>
+        <li><a href="#">Speaking</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-bar">
+      <div class="logo-d">SHAMEEK<span class="dot" style="color:#c4704b">.</span></div>
+      <ul class="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Building</a></li>
+        <li><a href="#">Speaking</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-bar">
+      <div class="logo-e">
+        <div class="logo-e-monogram">S</div>
+        <div class="logo-e-name">Shameek Chakravarty</div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Building</a></li>
+        <li><a href="#">Speaking</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-bar">
+      <div class="logo-f">SHAMEEK<span class="dot" style="color:#c4704b">.</span></div>
+      <ul class="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Building</a></li>
+        <li><a href="#">Speaking</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>
