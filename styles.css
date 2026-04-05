@@ -12,19 +12,19 @@
 }
 
 :root {
-  --bg-primary: #faf8f5;
-  --bg-secondary: #f2ede6;
+  --bg-primary: #f7f4fc;
+  --bg-secondary: #ede7f7;
   --bg-card: #ffffff;
-  --bg-card-hover: #f8f5f0;
-  --text-primary: #1a1815;
-  --text-secondary: #4a443c;
-  --text-muted: #7a7368;
-  --accent: #c4704b;
-  --accent-hover: #b5613e;
-  --accent-subtle: rgba(196, 112, 75, 0.08);
-  --accent-glow: rgba(196, 112, 75, 0.04);
-  --border: rgba(26, 24, 21, 0.08);
-  --border-hover: rgba(26, 24, 21, 0.14);
+  --bg-card-hover: #f2edf9;
+  --text-primary: #1e1529;
+  --text-secondary: #3d2c52;
+  --text-muted: #7a6a8e;
+  --accent: #9b6dce;
+  --accent-hover: #8759be;
+  --accent-subtle: rgba(155, 109, 206, 0.08);
+  --accent-glow: rgba(155, 109, 206, 0.04);
+  --border: rgba(30, 21, 41, 0.08);
+  --border-hover: rgba(30, 21, 41, 0.14);
   --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
   --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --max-width: 780px;

@@ -166,10 +166,10 @@ async function renderProposalPdf({ company_name, contact_name, sections }) {
   const fontBold = await pdf.embedFont(StandardFonts.HelveticaBold);
 
   // Brand colors — shameek.me palette
-  const brandPrimary = rgb(0.10, 0.09, 0.08);   // #1a1815 near-black charcoal
-  const brandAccent = rgb(0.77, 0.44, 0.29);    // #c4704b terracotta
-  const black = rgb(0.29, 0.27, 0.24);           // #4a443c body text
-  const gray = rgb(0.48, 0.45, 0.41);            // #7a7368 muted text
+  const brandPrimary = rgb(0.12, 0.08, 0.16);   // #1e1529 near-black purple
+  const brandAccent = rgb(0.61, 0.43, 0.81);    // #9b6dce lilac
+  const black = rgb(0.24, 0.17, 0.32);           // #3d2c52 dark purple
+  const gray = rgb(0.48, 0.42, 0.56);            // #7a6a8e muted mauve
 
   // ── Cover page ──
   const cover = pdf.addPage([612, 792]);
