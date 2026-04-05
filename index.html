@@ -357,20 +357,28 @@
     </div>
   </footer>
 
-  <!-- Chat Widget -->
-  <div class="chat-widget" id="chatWidget">
-    <button class="chat-toggle" id="chatToggle" aria-label="Open chat">
-      <svg class="chat-toggle-icon chat-icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Chat Launcher Stack -->
+  <div class="chat-launchers" id="chatLaunchers">
+    <button class="chat-launcher chat-launcher-proposal" id="proposalLauncher" aria-label="Get a proposal">
+      <svg class="chat-launcher-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+      </svg>
+      <span>Get Proposal</span>
+    </button>
+    <button class="chat-launcher chat-launcher-qa" id="qaLauncher" aria-label="Open chat">
+      <svg class="chat-launcher-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
       </svg>
-      <svg class="chat-toggle-icon chat-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
-        <line x1="18" y1="6" x2="6" y2="18"/>
-        <line x1="6" y1="6" x2="18" y2="18"/>
-      </svg>
-      <span class="chat-toggle-label">Ask me anything</span>
+      <span>Ask me anything</span>
     </button>
+  </div>
 
-    <div class="chat-panel" id="chatPanel">
+  <!-- Q&A Widget -->
+  <div class="chat-widget-wrap" id="qaWrap">
+    <div class="chat-panel">
       <div class="chat-header">
         <div class="chat-header-info">
           <div class="chat-header-avatar">S</div>
@@ -379,15 +387,57 @@
             <span class="chat-header-status"><span class="chat-header-dot"></span>Online</span>
           </div>
         </div>
+        <button class="chat-close-btn" id="qaClose" aria-label="Close chat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
       </div>
-      <div class="chat-messages" id="chatMessages">
+      <div class="chat-messages" id="qaMessages">
         <div class="chat-message chat-message-assistant">
           <div class="chat-bubble">I know a fair amount about Shameek's work, ventures, and how he can help. Ask me anything.</div>
         </div>
       </div>
-      <form class="chat-input-form" id="chatForm">
-        <input type="text" class="chat-input" id="chatInput" placeholder="Type your question..." autocomplete="off">
-        <button type="submit" class="chat-send" id="chatSend" aria-label="Send message">
+      <form class="chat-input-form" id="qaForm">
+        <input type="text" class="chat-input" id="qaInput" placeholder="Type your question..." autocomplete="off">
+        <button type="submit" class="chat-send" aria-label="Send message">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Proposal Widget -->
+  <div class="chat-widget-wrap" id="proposalWrap">
+    <div class="chat-panel chat-panel-proposal">
+      <div class="chat-header chat-header-proposal">
+        <div class="proposal-header-top">
+          <div class="chat-header-info">
+            <div class="chat-header-avatar">S</div>
+            <div class="chat-header-meta">
+              <span class="chat-header-name">Get a Proposal</span>
+              <span class="chat-header-status">Step <span id="proposalStepNum">1</span> of 6</span>
+            </div>
+          </div>
+          <button class="chat-close-btn" id="proposalClose" aria-label="Close proposal widget">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+        <div class="proposal-progress-track">
+          <div class="proposal-progress-fill" id="proposalProgressFill"></div>
+        </div>
+      </div>
+      <div class="chat-messages" id="proposalMessages"></div>
+      <form class="chat-input-form" id="proposalForm">
+        <input type="text" class="chat-input" id="proposalInput" placeholder="Type your answer..." autocomplete="off">
+        <button type="submit" class="chat-send" aria-label="Send answer">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="22" y1="2" x2="11" y2="13"/>
             <polygon points="22 2 15 22 11 13 2 9 22 2"/>
@@ -438,7 +488,6 @@
     revealElements.forEach(el => revealObserver.observe(el));
 
     /* --- Smooth scroll for anchor links --- */
-    /* P2 #19: Handles #hero properly for logo click */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -451,120 +500,182 @@
       });
     });
 
-    /* --- Chat Widget --- */
-    const chatWidget = document.getElementById('chatWidget');
-    const chatToggle = document.getElementById('chatToggle');
-    const chatPanel = document.getElementById('chatPanel');
-    const chatForm = document.getElementById('chatForm');
-    const chatInput = document.getElementById('chatInput');
-    const chatMessages = document.getElementById('chatMessages');
-    const chatIconOpen = chatToggle.querySelector('.chat-icon-open');
-    const chatIconClose = chatToggle.querySelector('.chat-icon-close');
-    const chatToggleLabel = chatToggle.querySelector('.chat-toggle-label');
+    /* --- Chat Widgets --- */
+    const chatLaunchers  = document.getElementById('chatLaunchers');
+    const qaLauncher     = document.getElementById('qaLauncher');
+    const proposalLauncher = document.getElementById('proposalLauncher');
+    const qaWrap         = document.getElementById('qaWrap');
+    const qaClose        = document.getElementById('qaClose');
+    const qaMessages     = document.getElementById('qaMessages');
+    const qaForm         = document.getElementById('qaForm');
+    const qaInput        = document.getElementById('qaInput');
+    const proposalWrap   = document.getElementById('proposalWrap');
+    const proposalClose  = document.getElementById('proposalClose');
+    const proposalMessages = document.getElementById('proposalMessages');
+    const proposalForm   = document.getElementById('proposalForm');
+    const proposalInput  = document.getElementById('proposalInput');
+    const proposalProgressFill = document.getElementById('proposalProgressFill');
+    const proposalStepNum = document.getElementById('proposalStepNum');
 
-    let chatHistory = [];
-    let chatOpen = false;
-    let chatMode = 'qa';
-    let intakeData = null;
+    let qaHistory = [];
+    let proposalHistory = [];
+    let proposalStarted = false;
 
-    chatToggle.addEventListener('click', () => {
-      chatOpen = !chatOpen;
-      chatPanel.classList.toggle('open', chatOpen);
-      chatIconOpen.style.display = chatOpen ? 'none' : 'block';
-      chatIconClose.style.display = chatOpen ? 'block' : 'none';
-      chatToggleLabel.style.display = chatOpen ? 'none' : 'inline';
-      if (chatOpen) {
-        chatInput.focus();
-        chatMessages.scrollTop = chatMessages.scrollHeight;
+    function hideLaunchers() { chatLaunchers.classList.add('hidden'); }
+    function showLaunchers() { chatLaunchers.classList.remove('hidden'); }
+
+    function openQA() {
+      hideLaunchers();
+      qaWrap.classList.add('open');
+      qaInput.focus();
+    }
+
+    function closeQA() {
+      qaWrap.classList.remove('open');
+      showLaunchers();
+    }
+
+    function openProposal() {
+      hideLaunchers();
+      proposalWrap.classList.add('open');
+      if (!proposalStarted) {
+        proposalStarted = true;
+        autoStartProposal();
+      } else {
+        proposalInput.focus();
       }
-    });
+    }
 
-    function addMessage(role, text) {
+    function closeProposal() {
+      proposalWrap.classList.remove('open');
+      showLaunchers();
+    }
+
+    qaLauncher.addEventListener('click', openQA);
+    qaClose.addEventListener('click', closeQA);
+    proposalLauncher.addEventListener('click', openProposal);
+    proposalClose.addEventListener('click', closeProposal);
+
+    function addMsg(container, role, text) {
       const div = document.createElement('div');
       div.className = `chat-message chat-message-${role}`;
       const bubble = document.createElement('div');
       bubble.className = 'chat-bubble';
       bubble.textContent = text;
       div.appendChild(bubble);
-      chatMessages.appendChild(div);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-      return div;
+      container.appendChild(div);
+      container.scrollTop = container.scrollHeight;
     }
 
-    function addTypingIndicator() {
+    function showTyping(container, id) {
       const div = document.createElement('div');
       div.className = 'chat-message chat-message-assistant';
-      div.id = 'chatTyping';
+      div.id = id;
       div.innerHTML = '<div class="chat-bubble chat-typing"><span></span><span></span><span></span></div>';
-      chatMessages.appendChild(div);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-      return div;
+      container.appendChild(div);
+      container.scrollTop = container.scrollHeight;
     }
 
-    function removeTypingIndicator() {
-      const el = document.getElementById('chatTyping');
+    function hideTyping(id) {
+      const el = document.getElementById(id);
       if (el) el.remove();
     }
 
-    async function submitIntake(data, history) {
+    function updateProgress(step) {
+      proposalProgressFill.style.width = Math.round((step / 6) * 100) + '%';
+      proposalStepNum.textContent = step;
+    }
+
+    async function apiChat(message, history) {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message, history })
+      });
+      if (!res.ok) throw new Error('Request failed');
+      return res.json();
+    }
+
+    async function autoStartProposal() {
+      showTyping(proposalMessages, 'proposalTyping');
+      try {
+        const data = await apiChat("I'd like to get a proposal.", []);
+        hideTyping('proposalTyping');
+        addMsg(proposalMessages, 'assistant', data.reply);
+        proposalHistory.push(
+          { role: 'user',      content: "I'd like to get a proposal." },
+          { role: 'assistant', content: data.reply }
+        );
+        if (data.intake_step) updateProgress(data.intake_step);
+        proposalInput.focus();
+      } catch (err) {
+        hideTyping('proposalTyping');
+        addMsg(proposalMessages, 'assistant', 'Something went wrong. Try the contact form or email shameekc@gmail.com directly.');
+      }
+    }
+
+    qaForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const message = qaInput.value.trim();
+      if (!message) return;
+      addMsg(qaMessages, 'user', message);
+      qaInput.value = '';
+      qaInput.disabled = true;
+      showTyping(qaMessages, 'qaTyping');
+      try {
+        const data = await apiChat(message, qaHistory);
+        hideTyping('qaTyping');
+        addMsg(qaMessages, 'assistant', data.reply);
+        qaHistory.push({ role: 'user', content: message }, { role: 'assistant', content: data.reply });
+        if (qaHistory.length > 30) qaHistory = qaHistory.slice(-24);
+      } catch (err) {
+        hideTyping('qaTyping');
+        addMsg(qaMessages, 'assistant', 'Something went wrong. Try the contact form or email shameekc@gmail.com directly.');
+      }
+      qaInput.disabled = false;
+      qaInput.focus();
+    });
+
+    proposalForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const message = proposalInput.value.trim();
+      if (!message) return;
+      addMsg(proposalMessages, 'user', message);
+      proposalInput.value = '';
+      proposalInput.disabled = true;
+      showTyping(proposalMessages, 'proposalTyping');
+      try {
+        const data = await apiChat(message, proposalHistory);
+        hideTyping('proposalTyping');
+        addMsg(proposalMessages, 'assistant', data.reply);
+        proposalHistory.push({ role: 'user', content: message }, { role: 'assistant', content: data.reply });
+        if (data.intake_step) updateProgress(data.intake_step);
+        if (data.intake_complete) {
+          proposalInput.disabled = true;
+          proposalForm.style.display = 'none';
+          submitIntake(data.intake_data, proposalHistory);
+          return;
+        }
+        if (proposalHistory.length > 30) proposalHistory = proposalHistory.slice(-24);
+      } catch (err) {
+        hideTyping('proposalTyping');
+        addMsg(proposalMessages, 'assistant', 'Something went wrong. Try the contact form or email shameekc@gmail.com directly.');
+      }
+      proposalInput.disabled = false;
+      proposalInput.focus();
+    });
+
+    async function submitIntake(intakeData, history) {
       try {
         await fetch('/api/generate-proposal', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ intakeData: data, conversation: history })
+          body: JSON.stringify({ intakeData, conversation: history })
         });
       } catch (err) {
         console.error('Failed to submit intake:', err);
       }
     }
-
-    chatForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const message = chatInput.value.trim();
-      if (!message) return;
-
-      addMessage('user', message);
-      chatInput.value = '';
-      chatInput.disabled = true;
-
-      addTypingIndicator();
-
-      try {
-        const res = await fetch('/api/chat', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ message, history: chatHistory })
-        });
-
-        removeTypingIndicator();
-
-        if (!res.ok) throw new Error('Request failed');
-
-        const data = await res.json();
-        addMessage('assistant', data.reply);
-
-        chatHistory.push({ role: 'user', content: message });
-        chatHistory.push({ role: 'assistant', content: data.reply });
-
-        // Track mode and intake state
-        if (data.mode) chatMode = data.mode;
-        if (data.intakeData) intakeData = data.intakeData;
-
-        // When intake completes, POST to generate-proposal
-        if (data.intakeComplete && data.intakeData) {
-          submitIntake(data.intakeData, chatHistory);
-        }
-
-        // Keep history manageable
-        if (chatHistory.length > 30) chatHistory = chatHistory.slice(-24);
-      } catch (err) {
-        removeTypingIndicator();
-        addMessage('assistant', 'Something went wrong. Try the contact form or email shameekc@gmail.com directly.');
-      }
-
-      chatInput.disabled = false;
-      chatInput.focus();
-    });
   </script>
 
 </body>
